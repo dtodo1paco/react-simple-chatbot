@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User testing... render snapshot 1`] = `
+<div
+  className="user"
+>
+  <div
+    key="wellcome-page"
+  >
+    Bienvenido al chatbot veterinario donde podrás plantear tus dudas acerca de tus mascotas.
+    <br />
+    <br />
+    Entrarás en el chat con el nombre: 
+    <br />
+    <br />
+    <button
+      className="iconButton"
+      onClick={[MockFunction]}
+      type="submit"
+    >
+      <span
+        className="label"
+      >
+        Abandonar
+      </span>
+    </button>
+  </div>
+</div>
+`;

@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Messages testing... render snapshot 1`] = `
+<div
+  className="message autohide"
+>
+  <div
+    className="message-error"
+  >
+    Snapshot summary
+    <li
+      key="0"
+    >
+      one message
+    </li>
+    <li
+      key="1"
+    >
+      another message
+    </li>
+    <li
+      key="2"
+    >
+      the third one
+    </li>
+  </div>
+</div>
+`;

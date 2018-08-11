@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginForm testing... render snapshot 1`] = `
+<form
+  className="form"
+  onSubmit={[Function]}
+>
+  <Input
+    Blur={[Function]}
+    Change={[Function]}
+    Error={false}
+    Focus={[Function]}
+    Focused={false}
+    ID="0"
+    Placeholder="Username"
+    Type="text"
+    Value=""
+    name="username"
+  />
+  <Input
+    Blur={[Function]}
+    Change={[Function]}
+    Error={false}
+    Focus={[Function]}
+    Focused={false}
+    ID="1"
+    Placeholder="Password"
+    Type="password"
+    Value=""
+    name="password"
+  />
+  <button
+    className="iconButton"
+    disabled={false}
+    type="submit"
+  >
+    <span
+      className="label"
+    >
+      Login
+    </span>
+  </button>
+</form>
+`;

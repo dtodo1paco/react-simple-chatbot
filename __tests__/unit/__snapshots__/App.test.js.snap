@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App testing... render snapshot 1`] = `
+<div
+  id="theApp"
+>
+  <h1>
+    Chatbot veterinario
+  </h1>
+  <User
+    loading={false}
+    loginHandler={[Function]}
+    logoutHandler={[Function]}
+    signupHandler={[Function]}
+    user={null}
+  />
+</div>
+`;
