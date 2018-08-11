@@ -7,6 +7,7 @@ import { is_link } from 'actions/util.js';
 import User from 'components/User';
 import Message from 'components/Message';
 import { Widget, addResponseMessage, addLinkSnippet, addUserMessage, toggleInputDisabled } from 'react-chat-widget';
+import 'styles/app.scss';
 import 'styles/chatbot.scss';
 
 class App extends Component {
@@ -166,7 +167,11 @@ class App extends Component {
     }
 
     render() {
-        const { user } = this.state;
+        const { user, thinking } = this.state;
+        if (!user && thinking === true) {
+            console.log("--- loading");
+            return <div className="loading-icon" />
+        }
         let messages = null;
         if (this.state.errors != null && this.state.errors.length > 0) {
             messages = <Message success={false} summary="No hemos podido identificarte" messages={this.state.errors} autohide={true} />
@@ -181,7 +186,7 @@ class App extends Component {
         return (
             <div id="theApp">
                 <h1>Chatbot veterinario</h1>
-            {messages}
+                {messages}
                 <User user={user} loading={this.state.thinking}
                     loginHandler={this.loginHandler}
                     signupHandler={this.signupHandler}
@@ -191,7 +196,7 @@ class App extends Component {
                 Pulsa en el botón de chat para comenzar a hacer preguntas o espera 2 segundos...
             </div>}
 
-            {user && <Widget fullScreenMode={false}
+            {user && <Widget
                 handleNewUserMessage={this.handleNewUserMessage}
                 senderPlaceHolder='Escribe tu texto aquí...'
                 title={this.state.user ? this.state.user.nickname : ''}
