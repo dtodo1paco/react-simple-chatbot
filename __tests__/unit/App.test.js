@@ -48,7 +48,19 @@ describe('App testing...', () => {
             expect(opened.length).toEqual(0);
         });
     });
+
     describe('behavoir', () => {
+        describe('when loading', () => {
+            it('when loading is true, loading icon is shown', () => {
+                const wrapper = shallow(<App />);
+                const instance = wrapper.instance();
+                expect(wrapper.state('thinking')).toBeFalsy();
+                expect(wrapper.find('.loading-icon')).toHaveLength(0);
+                wrapper.setState({thinking: true});
+                expect(wrapper.state('thinking')).toBeTruthy();
+                expect(wrapper.find('.loading-icon').length).toEqual(1);
+            });
+        });
         describe('when login', () => {
             UserAPI.doLogin = mock_doLogin;
             it('when the user login fails, the user is NOT set in state', async () => {

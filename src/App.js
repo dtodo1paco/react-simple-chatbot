@@ -169,7 +169,6 @@ class App extends Component {
     render() {
         const { user, thinking } = this.state;
         if (!user && thinking === true) {
-            console.log("--- loading");
             return <div className="loading-icon" />
         }
         let messages = null;

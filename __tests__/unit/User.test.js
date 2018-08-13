@@ -23,31 +23,23 @@ describe('User testing...', () => {
 
     describe('render', () => {
         it('snapshot', () => {
-            const wrapper = shallow(<User user={exampleUser} loading={false}
+            const wrapper = shallow(<User user={exampleUser}
                 loginHandler={handler}
                 signupHandler={handler}
                 logoutHandler={handler}
             />);
             expect(wrapper).toMatchSnapshot();
         });
-        it('when loading is true, loading icon is shown', () => {
-            let content = getRenderedContent(<User user={null} loading={true}
-                loginHandler={handler}
-                signupHandler={handler}
-                logoutHandler={handler}
-            />)
-            expect(content.props.className).toBe('loading-icon');
-        });
-        it('when loading is false and no user given, a tab menu is shown', () => {
-            let content = getRenderedContent(<User user={null} loading={false}
+        it('when no user given, a tab menu is shown', () => {
+            let content = getRenderedContent(<User user={null}
                 loginHandler={handler}
                 signupHandler={handler}
                 logoutHandler={handler}
             />);
             expect(content.key).toBe('tabs-menu');
         });
-        it('when loading is false and a user given, a wellcome page is shown', () => {
-            let content = getRenderedContent(<User user={exampleUser} loading={false}
+        it('when a user is given, a wellcome page is shown', () => {
+            let content = getRenderedContent(<User user={exampleUser}
                 loginHandler={handler}
                 signupHandler={handler}
                 logoutHandler={handler}
