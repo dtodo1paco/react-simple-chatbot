@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A simple chatbot client using a custom Auth nodejs app to protect token using JWT and encryption",
   "main": "index.js",
-  "homepage":"https://dtodo1paco.github.io/react-simple-chatbot",
+  "homepage": "https://dtodo1paco.github.io/react-simple-chatbot",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
@@ -26,6 +26,7 @@
     "babel-jest": "^23.4.2",
     "babel-loader": "^7.1.4",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-remove-strict-mode": "0.0.2",
     "babel-polyfill": "^6.26.0",
     "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
